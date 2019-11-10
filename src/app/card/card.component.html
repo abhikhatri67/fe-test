@@ -1,0 +1,56 @@
+<mat-card class="product-card">
+  <div class="card-header">
+    <div>
+      <span
+        class="dot"
+        [ngClass]="{ 'hide-dot': hideDot == 'true' ? true : false }"
+      >
+        <div class="dot-text">34%</div>
+      </span>
+    </div>
+    <div>
+      <i class="material-icons">
+        star_border
+      </i>
+    </div>
+  </div>
+
+  <img
+    [ngClass]="{ 'out-of-stock-style': hideDot == 'true' ? true : false }"
+    class="img-style"
+    mat-card-image
+    src="assets/product.jpg"
+  />
+
+  <mat-card-content
+    [ngClass]="{ 'out-of-stock-style': hideDot == 'true' ? true : false }"
+    class="card-content-style"
+  >
+    <p class="text-center">
+      <strong>{{ item }}</strong>
+    </p>
+    <p class="text-center">{{ itemDesc }}</p>
+    <p class="text-center text-grey">
+      <s>{{ disPrice }}</s>
+    </p>
+    <p class="text-center">
+      <strong>
+        {{ price }}
+      </strong>
+      <br />
+      {{ extraInfo }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="card-actions">
+    <a *ngIf="showButton" style="margin-top: 1.2rem;" class="full-width" mat-stroked-button>
+      <strong>See Review</strong>
+    </a>
+    <mat-progress-bar
+      *ngIf="showBar"
+      mode="determinate"
+      [value]="barProgress"
+    ></mat-progress-bar>
+    <label *ngIf="barTextRed" class="bar-text-red">{{ barTextRed }}</label>
+    <label *ngIf="barTextGrey" class="bar-text-grey">{{ barTextGrey }}</label>
+  </mat-card-actions>
+</mat-card>

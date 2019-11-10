@@ -1,0 +1,45 @@
+.card-container {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+
+.more-button-container {
+  text-align: center;
+}
+
+.more-button-style {
+  background-color: white;
+  width: 10rem;
+  border: 1px solid black;
+}
+
+.subtext-style {
+  font-size: 13px;
+  padding-right: 0.5rem;
+}
+
+.rectangle {
+  width: 25px;
+  height: 21px;
+  background-color: pink;
+  text-align: center;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.subtext-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rect-text {
+  margin: 0.3rem;
+  text-align: center;
+}
